@@ -520,11 +520,13 @@ nav .right a span {
 }
 
 /*----------------------------------------------------------------- // ---------------------------------------------------------------*/
-/*HARD SKILLS E SOFT SKILLS */
+/* HARD SKILLS E SOFT SKILLS */
 
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
+  background: linear-gradient(to right, #f9f9f9, #ffffff); /* Gradiente suave no fundo */
+  min-height: 500px;
 }
 
 .skills-section h2 {
@@ -535,44 +537,79 @@ nav .right a span {
 
 .skills-section .skills {
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  margin-bottom: 30px;
+  justify-content: center; /* Centraliza os blocos horizontalmente */
+  align-items: center; /* Centraliza os blocos verticalmente (se necessário) */
+  flex-wrap: wrap; /* Permite que os blocos se ajustem em telas menores */
+  gap: 50px; /* Espaço entre os blocos */
 }
 
 .skills-section .skills .skills-block {
   flex: 1;
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 30px; /* Mais espaçamento interno */
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0e0e0; /* Adiciona borda leve */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
 }
 
 .skills-section .skills .skills-block h3 {
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
+  color: #333; /* Cor mais escura para o título */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  letter-spacing: 1px; /* Aumenta o espaçamento entre letras */
+  border-bottom: 2px solid #000000; /* Linha decorativa */
+  padding-bottom: 10px;
 }
 
 .skills-section .skills .skills-block ul {
-  list-style-type: none;
-  padding-left: 0;
+  display: flex;
+  flex-direction: column; /* Coloca os itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove espaçamento interno */
 }
 
 .skills-section .skills .skills-block ul li {
+  display: flex; /* Para alinhar ícone e texto lado a lado */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
   font-size: 18px;
   margin-bottom: 15px;
-  text-align: center;
+  text-align: center; /* Garante centralização de texto em dispositivos menores */
+  font-family: 'Arial', sans-serif; /* Ajusta a fonte */
+  font-style: italic; /* Deixa o texto em itálico */
+}
+
+.skills-section .skills .skills-block ul li img {
+  width: 30px; /* Tamanho do ícone */
+  height: 30px;
+  margin-right: 10px; /* Espaço entre ícone e texto */
+  vertical-align: middle; /* Alinha o ícone com o texto */
+  background-color: #f0f0f0; /* Fundo do ícone */
+  padding: 8px; /* Espaçamento interno no ícone */
+  border-radius: 50%; /* Torna o fundo do ícone circular */
 }
 
 /* Resumo para mobile */
 @media (max-width: 740px) {
   .skills-section .skills {
-    flex-direction: column;
+    flex-direction: column; /* Empilha os blocos verticalmente */
     gap: 30px;
   }
-}
 
+  .skills-section .skills .skills-block ul li {
+    font-size: 16px; /* Reduz tamanho do texto */
+  }
+
+  .skills-section .skills .skills-block ul li img {
+    width: 20px; /* Reduz tamanho do ícone */
+    height: 20px;
+    margin-right: 8px;
+  }
+}
 
 
 /*FOTTER*/
