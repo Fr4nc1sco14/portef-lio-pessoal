@@ -30,43 +30,95 @@ a {
   text-decoration: none;
 }
 
-/* NAVBAR */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
-.logo {
-  height: 50px; /* Ajuste conforme o tamanho ideal */
-  margin-right: 10px; /* Espaço entre a logo e o texto */
-  vertical-align: middle;
-}
-
-nav {
+/* NAVBAR GERAL */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   height: 80px;
+  color: #000; /* Texto escuro */
+  background-color: transparent; /* Fundo transparente */
+  border-bottom: 1px solid #e5e5e5; /* Linha sutil abaixo (opcional) */
+  margin-bottom: 50px; /* Ajuste o valor conforme necessário */
 }
 
-nav .left a {
-  color: var(--text-color);
+/* LOGO */
+.navbar .left a {
+  display: flex;
+  align-items: center;
+  color: #000;
   font-size: 22px;
   font-weight: 600;
+  text-decoration: none;
 }
 
-nav .right a {
-  color: var(--text-color);
-  margin: 0 10px;
+.navbar .logo {
+  height: 50px;
+  margin-right: 10px;
 }
 
-nav .right a:last-child {
-  color: var(--background-color);
-  background-color: var(--text-color);
+/* LINKS DE NAVEGAÇÃO */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+}
+
+.navbar .nav-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #0077b6; /* Cor de destaque */
+}
+
+/* LINKS DE REDES SOCIAIS */
+.navbar .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .right a {
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .right a span {
+  margin-left: 5px;
+}
+
+.navbar .right a:last-child {
+  color: #fff;
+  background-color: #000;
   padding: 5px 15px;
   border-radius: 5px;
 }
 
-nav .right a span {
-  margin-left: 5px;
+.navbar .right a:last-child:hover {
+  background-color: #333;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 
 /* SECTION 1: Hero */
 .hero-section {
@@ -117,6 +169,11 @@ nav .right a span {
   border-radius: 50%;
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* SECTION 2: Sobre o Curso */
 .curso-section {
   padding: 0 50px;
@@ -133,6 +190,11 @@ nav .right a span {
   font-size: 18px;
   text-align: center;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 
 /* SECTION 3: Portfólio */
 .portfolio-section {
@@ -193,6 +255,12 @@ nav .right a span {
   display: inline-block;
 }
 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /* SECTION 4: Aprendizados e Desafios */
 .aprendizados-section {
   padding: 0 50px;
@@ -210,96 +278,172 @@ nav .right a span {
   text-align: center;
 }
 
-/* SECTION 5: Testemunhos */
-.testimony-section {
-  padding: 0 50px;
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* SECTION EDUCAÇÃO E FORMAÇÃO */
+.educacao-section {
+  padding: 40px 50px;
   margin-bottom: 100px;
+  background-color: #f4f4f4; /* Fundo suave para toda a seção */
+  border-radius: 8px; /* Bordas arredondadas para a seção */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para a seção */
 }
 
-.testimony-section h2 {
+.educacao-section h2 {
   font-size: 35px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container dos itens de educação */
+.educacao-section .educacao-item {
+  background-color: #fff; /* Fundo branco para os itens */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   margin-bottom: 30px;
-  text-align: center;
 }
 
-.testimony-section .group {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+.educacao-section .educacao-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Levanta o item quando o usuário passa o mouse */
 }
 
-.testimony-section .group .person-details {
-  text-align: center;
-  flex: 2;
+.educacao-section .educacao-item h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #0056b3; /* Cor mais chamativa para os títulos */
+  font-weight: bold;
 }
 
-.testimony-section .group .person-details img {
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
+.educacao-section .educacao-item .instituicao {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.educacao-section .educacao-item .periodo {
+  font-size: 16px;
+  color: #555;
   margin-bottom: 10px;
 }
 
-.testimony-section .group .person-details p {
-  font-weight: 600;
+.educacao-section .educacao-item .localizacao {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.testimony-section .group .person-details p:last-child {
-  font-weight: normal;
+.educacao-section .educacao-item .website {
+  font-size: 16px;
+  color: #0077cc; /* Cor para links */
 }
 
-.testimony-section .group .text {
-  flex: 8;
+.educacao-section .educacao-item .website a {
+  text-decoration: none;
 }
 
-/* SECTION 6: Experiência de Trabalho ou Estágios */
+.educacao-section .educacao-item .nivel {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* SECTION EXPERIÊNCIA DE TRABALHO OU ESTÁGIOS */
 .experiencia-section {
-  padding: 0 50px;
+  padding: 40px 50px;
   margin-bottom: 100px;
+  background-color: #f4f4f4; /* Fundo suave para toda a seção */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .experiencia-section h2 {
   font-size: 35px;
   text-align: center;
   margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Container das experiências */
 .experiencia-section .experiencia {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+/* Cada item de experiência */
 .experiencia-section .experiencia-item {
-  background-color: #f9f9f9;
+  background-color: #fff; /* Fundo branco para os itens */
   padding: 20px;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experiencia-section .experiencia-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Levanta o item quando o usuário passa o mouse */
 }
 
 .experiencia-section .experiencia-item h3 {
   font-size: 25px;
   margin-bottom: 10px;
+  color: #0056b3;
+  font-weight: bold;
 }
 
 .experiencia-section .experiencia-item .empresa {
   font-size: 16px;
   color: #777;
   margin-bottom: 15px;
+  font-style: italic;
 }
 
 .experiencia-section .experiencia-item p {
   font-size: 16px;
   color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 /* Ajustes para telas menores */
 @media (max-width: 740px) {
-  .experiencia-section .experiencia {
-    padding: 0 20px;
+  .educacao-section, .experiencia-section {
+    padding: 0 20px; /* Menor padding para telas pequenas */
+  }
+
+  .educacao-section .educacao-item, .experiencia-section .experiencia-item {
+    padding: 15px; /* Ajustando o padding dentro dos itens para telas pequenas */
+  }
+
+  .educacao-section .educacao-item h3, .experiencia-section .experiencia-item h3 {
+    font-size: 22px; /* Tamanho menor para o título */
+  }
+
+  .educacao-section .educacao-item p, .experiencia-section .experiencia-item p {
+    font-size: 14px; /* Tamanho menor para o texto */
   }
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
 
 /* SECTION 7: OBJETIVOS FUTUROS */
 .objetivos-section {
@@ -370,6 +514,10 @@ nav .right a span {
   }
 }
 
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* SECTION 8: Contacto */
@@ -445,7 +593,6 @@ nav .right a span {
   .curso-section h2,
   .portfolio-section h2,
   .aprendizados-section h2,
-  .testimony-section h2,
   .objetivos-section h2 {
     font-size: 30px;
   }
@@ -453,7 +600,6 @@ nav .right a span {
   .curso-section p,
   .portfolio-section .projects .project p,
   .aprendizados-section p,
-  .testimony-section .text,
   .contact-section .group .text {
     font-size: 16px;
   }
@@ -508,108 +654,142 @@ nav .right a span {
     font-size: 16px;
   }
 
-  /* SECTION 3: Testimony */
-  .testimony-section {
-    padding: 0 20px;
-  }
-
+  
   /* SECTION 4: Contact */
   .contact-section {
     padding: 0 20px;
   }
 }
 
-/*----------------------------------------------------------------- // ---------------------------------------------------------------*/
-/* HARD SKILLS E SOFT SKILLS */
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* HARD SKILLS E SOFT SKILLS */
 .skills-section {
-  padding: 0 50px;
+  padding: 40px 50px;
   margin-bottom: 100px;
-  background: linear-gradient(to right, #f9f9f9, #ffffff); /* Gradiente suave no fundo */
   min-height: 500px;
+  border-radius: 8px; /* Bordas arredondadas para a seção */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Gradiente suave no fundo */
 }
 
 .skills-section h2 {
   font-size: 35px;
   text-align: center;
   margin-bottom: 40px;
+  color: #333; /* Cor para contraste */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Container dos blocos de habilidades */
 .skills-section .skills {
   display: flex;
   justify-content: center; /* Centraliza os blocos horizontalmente */
-  align-items: center; /* Centraliza os blocos verticalmente (se necessário) */
-  flex-wrap: wrap; /* Permite que os blocos se ajustem em telas menores */
+  align-items: center; /* Centraliza os blocos verticalmente */
+  flex-wrap: wrap;
   gap: 50px; /* Espaço entre os blocos */
 }
 
 .skills-section .skills .skills-block {
   flex: 1;
-  background-color: #f9f9f9;
-  padding: 30px; /* Mais espaçamento interno */
-  border-radius: var(--border-radius);
+  background-color: #ffffff; /* Fundo branco para os itens */
+  padding: 30px;
+  border-radius: 8px;
   border: 2px solid #e0e0e0; /* Adiciona borda leve */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.skills-section .skills .skills-block:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  transform: translateY(-5px); /* Levanta o bloco */
 }
 
 .skills-section .skills .skills-block h3 {
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
-  color: #333; /* Cor mais escura para o título */
-  text-transform: uppercase; /* Deixa o texto em maiúsculas */
-  letter-spacing: 1px; /* Aumenta o espaçamento entre letras */
-  border-bottom: 2px solid #000000; /* Linha decorativa */
+  color: #333; /* Cor para o título */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #000 ; /* Linha decorativa */
   padding-bottom: 10px;
 }
 
 .skills-section .skills .skills-block ul {
   display: flex;
-  flex-direction: column; /* Coloca os itens em coluna */
-  align-items: center; /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  list-style: none; /* Remove os marcadores da lista */
-  padding: 0; /* Remove espaçamento interno */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .skills-section .skills .skills-block ul li {
-  display: flex; /* Para alinhar ícone e texto lado a lado */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   margin-bottom: 15px;
-  text-align: center; /* Garante centralização de texto em dispositivos menores */
-  font-family: 'Arial', sans-serif; /* Ajusta a fonte */
-  font-style: italic; /* Deixa o texto em itálico */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
 }
 
 .skills-section .skills .skills-block ul li img {
-  width: 30px; /* Tamanho do ícone */
-  height: 30px;
-  margin-right: 10px; /* Espaço entre ícone e texto */
-  vertical-align: middle; /* Alinha o ícone com o texto */
-  background-color: #f0f0f0; /* Fundo do ícone */
-  padding: 8px; /* Espaçamento interno no ícone */
-  border-radius: 50%; /* Torna o fundo do ícone circular */
+  width: 35px; /* Aumenta o tamanho do ícone */
+  height: 35px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Adiciona transição ao ícone */
+}
+
+.skills-section .skills .skills-block ul li img:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Resumo para mobile */
 @media (max-width: 740px) {
+  .skills-section {
+    padding: 20px; /* Reduzindo padding em telas menores */
+  }
+
   .skills-section .skills {
     flex-direction: column; /* Empilha os blocos verticalmente */
     gap: 30px;
   }
 
+  .skills-section .skills .skills-block {
+    width: 100%; /* Faz os blocos ocuparem toda a largura */
+    padding: 20px; /* Ajusta o padding dentro dos blocos */
+  }
+
   .skills-section .skills .skills-block ul li {
-    font-size: 16px; /* Reduz tamanho do texto */
+    font-size: 16px; /* Reduz o tamanho do texto em dispositivos móveis */
   }
 
   .skills-section .skills .skills-block ul li img {
-    width: 20px; /* Reduz tamanho do ícone */
-    height: 20px;
+    width: 25px; /* Reduz o tamanho do ícone */
+    height: 25px;
     margin-right: 8px;
   }
 }
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 
 
 /*FOTTER*/
