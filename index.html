@@ -15,10 +15,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
   <title>Portfólio - Francisco Pereira</title>
 </head>
 <body>
+
+  <script src="main.js"></script>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -57,6 +67,10 @@
   </div>
 </nav>
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
 
   <main>
     <!-- SECTION 1: Hero -->
@@ -88,6 +102,11 @@
       </div>
     </section>
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+
     <!-- SECTION 2: Sobre o Curso -->
     <section id="curso" class="curso-section">
       <h2>Sobre o Curso</h2>
@@ -116,12 +135,20 @@
       </div>
     </section>
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+
     <!-- SECTION 4: Aprendizados e Desafios -->
     <section id="aprendizados" class="aprendizados-section">
       <h2>Aprendizados e Desafios</h2>
       <p>Este ano letivo, tive a oportunidade de aprender tecnologias como JavaScript, Node.js e React. Um dos maiores desafios foi integrar funcionalidades dinâmicas em páginas estáticas, mas consegui superar isso utilizando bibliotecas e frameworks modernos. Estou constantemente a melhorar e aprender novas práticas na área do desenvolvimento web.</p>
     </section>
 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
 <!-- SECTIONS 5: HARD SKILLS E SOFT SKILLS-->
 <section id="skills" class="skills-section">
@@ -185,13 +212,21 @@
       </div>
     </section>
     
- 
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
 
     <!-- SECTION 7: Objetivos Futuros -->
     <section id="objetivos" class="objetivos-section">
       <h2>Objetivos Futuros</h2>
       <p>O meu objetivo é continuar a desenvolver as minhas competências em desenvolvimento web, explorar novas tecnologias como Inteligência Artificial e melhorar a experiência de utilizadores em plataformas digitais. Pretendo contribuir para a criação de soluções inovadoras em empresas tecnológicas. Além disso, tenho como objetivo ingressar na Licenciatura em Engenharia de Sistemas Informáticos, a fim de expandir os meus conhecimentos e capacidades técnicas, e aprofundar a minha compreensão das áreas de sistemas e redes computacionais.</p>
     </section>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
 
     <!-- SECTION 8: Contacto -->
@@ -201,21 +236,23 @@
         <div class="text">
           <p>Se estiveres interessado em discutir mais sobre o meu trabalho ou se tens alguma dúvida, não hesites em entrar em contacto comigo. Estou sempre disponível para novas oportunidades e desafios.</p>
         </div>
-
-        <form>
+    
+        <!-- Modifiquei o formulário para enviar para o arquivo PHP -->
+        <form id="contact-form" method="POST" action="enviar.php">
           <label for="name">Nome</label>
-          <input type="text" id="name">
-
+          <input type="text" id="name" name="name" required>
+        
           <label for="email">Email</label>
-          <input type="email" id="email">
-
+          <input type="email" id="email" name="email" required>
+        
           <label for="message">Mensagem</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
+          <textarea id="message" name="message" cols="30" rows="10" required></textarea>
+        
           <button type="submit">Enviar Mensagem</button>
-        </form>
+        </form>        
       </div>
     </section>
+    
 
 
 
@@ -225,7 +262,6 @@
   <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
-
   <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
 
